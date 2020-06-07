@@ -1,0 +1,35 @@
+CERINTA 1 ~c1.c
+
+copyTable - copiaza game board-ul momentului acutal de joc intr-o matrice cu aceleasi dimensiuni
+
+addMove - primeste ca parametri momentul actual de joc, indexul unei linii si al unei coloane, unde se va introduce "R" sau "B", in functie de jetonul care trebuie introdus in game board, numarul de linii al tablei de joc (pentru apelarea functiei copyTable), momentul urmator de joc; returneaza nodul reprezentativ urmatorului moment de joc (respectiv, a unui moment posibil de joc)
+
+initGame - genereaza momentul de start al jocului
+
+winCheck - verifica existenta unor posibile mutari ale momentului de joc (adica, daca momentul de joc este unul final)
+
+finalCheck - verifica daca pe tabla de joc se mai pot introduce jetoane
+
+allMoves - genereaza toate mutarile posibile, primeste un moment de joc si nr de linii si coloane ale tablei de joc (pentru a fi apelate functiile winCheck, finalCheck, copyTable, addMove)
+
+printGame - afiseaza toate mutarile posibile in fisierul primit ca paramtetru (out)
+
+freeTree - elibereaza memoria alocata pentru generarea tuturor mutarilor posibile
+
+c1 - functia principala cerintei 1; citeste prima linie din fisierul de input (nr linii si coloane tabla de joc, player-ul care trebuie sa mute); citeste toate liniile momentului de joc initial; initializeaza jocul (momentul "start"), genereaza toate mutarile; afiseaza in fisierul de output tabla initiala de joc si ulterior afiseaza tot jocul; se elibereaza memoria alocata momentelor de joc
+
+CERINTA 2 ~c2.c
+
+minORmax - functie ce calculeaza valoarea maxima, respectiv minima a unei liste de copii a unui nod
+
+values - primeste matricea (de caractere) a fisierului de input, nr de "nivele" al arborelui de joc, o matrice de valori si una pentru frunze (initializate cu 0); creeaza doua matrici: una a valorilor (nr de copii al unui nod sau valorile frunzelor) si una a frunzelor (1 daca este frunza values[i][j], sau 0 daca nu) 
+
+addNode - creeaza un nod nou, i se atribuie valoarea respectiva si, in functie de nivelul pe care se afla, "Min" sau "Max"
+
+allGame - genereaza arborele jocului (pentru algoritmul Minimax); parametri : nodul actual din arbore, nr maxim de nivele, un vector de pozitii ( pentru a sti pe ce pozitie ne aflam pe un anumit nivel), matricea valorilor si matricea frunzelor
+
+printMinimax - afisare in output a "jocului"
+
+freeMinimax - eliberare memorie folosita pentru "joc"
+
+c2 - citeste prima linie din fisierul de input pentru a afla numarul de nivele pe care le are arborele de joc; creeaza primul nod ("root"); genereaza tabla jocului; elibereaza memoria (matrice de valori/frunze/linii + vector de pozitii);
