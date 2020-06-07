@@ -1,4 +1,4 @@
-CERINTA 1 ~c1.c
+ ~c1.c
 
 copyTable - copiaza game board-ul momentului acutal de joc intr-o matrice cu aceleasi dimensiuni
 
@@ -18,7 +18,7 @@ freeTree - elibereaza memoria alocata pentru generarea tuturor mutarilor posibil
 
 c1 - functia principala cerintei 1; citeste prima linie din fisierul de input (nr linii si coloane tabla de joc, player-ul care trebuie sa mute); citeste toate liniile momentului de joc initial; initializeaza jocul (momentul "start"), genereaza toate mutarile; afiseaza in fisierul de output tabla initiala de joc si ulterior afiseaza tot jocul; se elibereaza memoria alocata momentelor de joc
 
-CERINTA 2 ~c2.c
+ ~c2.c
 
 minORmax - functie ce calculeaza valoarea maxima, respectiv minima a unei liste de copii a unui nod
 
